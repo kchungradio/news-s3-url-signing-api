@@ -1,0 +1,27 @@
+{
+  "name": "kchung-newsbody-api",
+  "version": "1.0.0",
+  "author": "Tim Phillips <tim@kchungradio.org>",
+  "dependencies": {
+    "micro": "^7.0.3",
+    "aws-sdk": "^2.9.0"
+  },
+  "devDependencies": {
+    "standard": "^8.6.0"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "scripts": {
+    "start": "micro",
+    "dev": "source ./accessKeys.sh && micro"
+  },
+  "now": {
+    "alias": "kchung-newsbody-api.now.sh",
+    "env": {
+      "NODE_ENV": "production",
+      "AWS_ACCESS_KEY_ID": "@kchung-aws-access-key-id",
+      "AWS_SECRET_ACCESS_KEY": "@kchung-aws-secret-access-key"
+    }
+  }
+}
