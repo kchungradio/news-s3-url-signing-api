@@ -1,10 +1,14 @@
-const { getEpisodes } = require('./lib/episodes')
+const { getStories } = require('./lib/stories')
 
-module.exports = async function (req, res) {
+const fetchStories = async () => {
   try {
-    const episodes = await getEpisodes()
-    return episodes.Items
+    const stories = await getStories()
+    return stories.Items
   } catch (err) {
     console.error(err)
   }
+}
+
+module.exports = async function (req, res) {
+  return fetchStories()
 }
