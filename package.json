@@ -1,5 +1,5 @@
 {
-  "name": "kchung-newsbody-api",
+  "name": "kchung-newsbody-db-api",
   "version": "1.0.0",
   "author": "Tim Phillips <tim@kchungradio.org>",
   "dependencies": {
@@ -17,7 +17,7 @@
     "dev": "source ./accessKeys.sh && micro -p 3001"
   },
   "now": {
-    "alias": "kchung-newsbody-api.now.sh",
+    "alias": "kchung-newsbody-db-api.now.sh",
     "env": {
       "NODE_ENV": "production",
       "AWS_ACCESS_KEY_ID": "@kchung-aws-access-key-id",
