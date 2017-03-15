@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "micro",
-    "dev": "source ./accessKeys.sh && micro"
+    "dev": "source ./accessKeys.sh && micro -p 3001"
   },
   "now": {
     "alias": "kchung-newsbody-api.now.sh",
