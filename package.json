@@ -1,6 +1,6 @@
 {
   "name": "kchung-newsbody-db-api",
-  "version": "1.0.0",
+  "description": "KCHUNG Newsbody DynamoDB API",
   "author": "Tim Phillips <tim@kchungradio.org>",
   "dependencies": {
     "aws-sdk": "^2.9.0",
@@ -13,8 +13,8 @@
     "parser": "babel-eslint"
   },
   "scripts": {
-    "start": "micro",
-    "dev": "source ./accessKeys.sh && micro -p 3001"
+    "dev": "source ./accessKeys.sh && micro -p 3001",
+    "start": "micro"
   },
   "now": {
     "alias": "kchung-newsbody-db-api.now.sh",
