@@ -1,6 +1,6 @@
 const { json, createError } = require('micro')
 
-const { getStories, createStory } = require('./lib/stories')
+const { getStoriesList, getStories, createStory } = require('./lib/stories')
 
 module.exports = async function (req, res) {
   if (process.env.NODE_ENV !== 'production') {
@@ -9,7 +9,7 @@ module.exports = async function (req, res) {
 
   switch (req.method) {
     case 'GET':
-      const stories = await getStories()
+      const stories = await getStoriesList()
       return stories.Items
     case 'POST':
       // validate jwt here
