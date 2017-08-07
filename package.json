@@ -1,6 +1,6 @@
 {
-  "name": "kchung-newsbody-db-api",
-  "description": "KCHUNG Newsbody DynamoDB API",
+  "name": "kchung-newsbody-stories-api",
+  "description": "KCHUNG Newsbody Stories API",
   "author": "Tim Phillips <tim@kchungradio.org>",
   "dependencies": {
     "aws-sdk": "^2.9.0",
@@ -15,13 +15,5 @@
   "scripts": {
     "dev": "source ./accessKeys.sh && micro -p 3001",
     "start": "micro"
-  },
-  "now": {
-    "alias": "kchung-newsbody-db-api.now.sh",
-    "env": {
-      "NODE_ENV": "production",
-      "AWS_ACCESS_KEY_ID": "@kchung-aws-access-key-id",
-      "AWS_SECRET_ACCESS_KEY": "@kchung-aws-secret-access-key"
-    }
   }
 }

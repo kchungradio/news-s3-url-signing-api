@@ -1,0 +1,10 @@
+{
+  "alias": [
+    "stories.api.kchung.news"
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "AWS_ACCESS_KEY_ID": "@kchung-aws-access-key-id",
+    "AWS_SECRET_ACCESS_KEY": "@kchung-aws-secret-access-key"
+  }
+}
