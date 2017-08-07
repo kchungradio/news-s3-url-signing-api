@@ -4,16 +4,17 @@
   "author": "Tim Phillips <tim@kchungradio.org>",
   "dependencies": {
     "aws-sdk": "^2.9.0",
-    "micro": "^7.3.0"
+    "micro": "^8.0.1"
   },
   "devDependencies": {
+    "micro-dev": "^1.1.2",
     "standard": "^8.6.0"
   },
   "standard": {
     "parser": "babel-eslint"
   },
   "scripts": {
-    "dev": "source ./accessKeys.sh && micro -p 3001",
+    "dev": "source ./accessKeys.sh && micro-dev -p 3001",
     "start": "micro"
   }
 }
