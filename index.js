@@ -1,6 +1,6 @@
 const { json, createError } = require('micro')
 
-const { getStoriesList, getStories, createStory } = require('./lib/stories')
+const { getStoriesList, createStory } = require('./lib/stories')
 
 module.exports = async function (req, res) {
   if (process.env.NODE_ENV !== 'production') {
