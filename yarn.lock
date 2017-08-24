@@ -135,12 +135,13 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
-aws-sdk@^2.9.0:
-  version "2.82.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.82.0.tgz#a94cfe90c15ee0e403f00f0665dccb98aa93e1f8"
+aws-sdk@^2.49.0:
+  version "2.102.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.102.0.tgz#70e52a8eff63de4c68e1d08c5c37db5561324340"
   dependencies:
     buffer "4.9.1"
     crypto-browserify "1.0.9"
+    events "^1.1.1"
     jmespath "0.15.0"
     querystring "0.2.0"
     sax "1.2.1"
@@ -524,6 +525,12 @@ domutils@1.5.1:
     dom-serializer "0"
     domelementtype "1"
 
+dynamo-node@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/dynamo-node/-/dynamo-node-1.1.8.tgz#d3617fb758bf52268df68f591c72df9cf75391a1"
+  dependencies:
+    aws-sdk "^2.49.0"
+
 ecc-jsbn@~0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"
@@ -699,6 +706,10 @@ event-emitter@~0.3.5:
   dependencies:
     d "1"
     es5-ext "~0.10.14"
+
+events@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/events/-/events-1.1.1.tgz#9ebdb7635ad099c70dcc4c2a1f5004288e8bd924"
 
 execa@^0.6.0:
   version "0.6.3"

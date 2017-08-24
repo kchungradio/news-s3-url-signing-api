@@ -3,7 +3,7 @@
   "description": "KCHUNG Newsbody Stories API",
   "author": "Tim Phillips <tim@kchungradio.org>",
   "dependencies": {
-    "aws-sdk": "^2.9.0",
+    "dynamo-node": "^1.1.8",
     "micro": "^8.0.1"
   },
   "devDependencies": {
