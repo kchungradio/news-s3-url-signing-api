@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
       const { authorSlug } = url.parse(req.url, true).query
       // query or scan the db depending on query params
       const result = authorSlug
-        ? await stories.query('author', '=', authorSlug)
+        ? await stories.query('authorSlug', '=', authorSlug)
         : await stories.scan()
       return result.Items
     // case 'POST':
