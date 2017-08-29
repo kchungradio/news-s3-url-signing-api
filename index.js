@@ -1,29 +1,35 @@
+const { router, get, post } = require('microrouter')
 const url = require('url')
-const { createError } = require('micro')
+const { json } = require('micro')
 
+const { allowAllOriginsOutsideProduction } = require('./lib/origins')
 const { stories } = require('./lib/db')
 
-module.exports = async (req, res) => {
-  if (process.env.NODE_ENV !== 'production') {
-    res.setHeader('Access-Control-Allow-Origin', '*')
-  }
+const getStories = async (req, res) => {
+  allowAllOriginsOutsideProduction(res)
 
-  switch (req.method) {
-    case 'GET':
-      // parse url for query params
-      const { authorSlug } = url.parse(req.url, true).query
-      // query or scan the db depending on query params
-      const result = authorSlug
-        ? await stories.query('authorSlug', '=', authorSlug)
-        : await stories.scan()
-      return result.Items
-    // case 'POST':
-    //   // validate jwt here
-    //   const data = await json(req)
-    //   const story = data.story
-    //   const result = await createStory(story)
-    //   return result
-    default:
-      throw createError(405, 'Invalid method')
-  }
+  // parse url for query params
+  const { authorSlug } = url.parse(req.url, true).query
+  // query or scan the db depending on query params
+  const result = authorSlug
+    ? await stories.query('authorSlug', '=', authorSlug)
+    : await stories.scan()
+  return result.Items
 }
+
+const postStory = async (req, res) => {
+  allowAllOriginsOutsideProduction(res)
+
+  // TODO: authenticate
+  const story = await json(req)
+  // TODO: validate story
+  // TODO: make sure the owner matches the session creds
+  story.createdAt = new Date().toISOString()
+  const result = await stories.add(story)
+  return result
+}
+
+module.exports = router(
+  get('/', getStories),
+  post('/', postStory)
+)

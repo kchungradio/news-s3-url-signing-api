@@ -4,7 +4,8 @@
   "author": "Tim Phillips <tim@kchungradio.org>",
   "dependencies": {
     "dynamo-node": "^1.1.8",
-    "micro": "^8.0.1"
+    "micro": "^8.0.1",
+    "microrouter": "^2.2.2"
   },
   "devDependencies": {
     "micro-dev": "^1.1.2",
