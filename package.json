@@ -5,7 +5,8 @@
   "dependencies": {
     "dynamo-node": "^1.1.8",
     "micro": "^8.0.1",
-    "microrouter": "^2.2.2"
+    "microrouter": "^2.2.2",
+    "slugify": "^1.2.1"
   },
   "devDependencies": {
     "micro-dev": "^1.1.2",
