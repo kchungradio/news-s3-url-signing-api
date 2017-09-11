@@ -5,6 +5,7 @@ const {
   put,
   options
 } = require('microrouter')
+const cors = require('micro-cors')()
 
 const {
   getStories,
@@ -13,7 +14,6 @@ const {
   replaceStory
 } = require('./lib/stories')
 const { getSignedUrl } = require('./lib/s3')
-const { preflight } = require('./lib/cors')
 
 // TODO: authenticate in lib/stories
 // TODO: authenticate in lib/s3
@@ -23,7 +23,7 @@ const { preflight } = require('./lib/cors')
 // sort key: createdAt
 // consider changing primary key to authorId in case of name change
 
-module.exports = router(
+module.exports = cors(router(
   get('/', getStories), // allows ?authorSlug=author-slug
   get('/:titleSlug', getStory),
 
@@ -32,7 +32,4 @@ module.exports = router(
 
   get('/s3/sign', getSignedUrl),
 
-  options('/', preflight),
-  options('/:titleSlug', preflight),
-  options('/s3/sign', preflight)
-)
+))

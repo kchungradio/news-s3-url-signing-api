@@ -4,12 +4,13 @@
   "author": "Tim Phillips <tim@kchungradio.org>",
   "dependencies": {
     "dynamo-node": "^1.1.8",
-    "micro": "^8.0.1",
+    "micro": "^8.0.4",
+    "micro-cors": "^0.0.4",
     "microrouter": "^2.2.2",
     "slugify": "^1.2.1"
   },
   "devDependencies": {
-    "micro-dev": "^1.1.2",
+    "micro-dev": "^1.2.2",
     "standard": "^8.6.0"
   },
   "standard": {
