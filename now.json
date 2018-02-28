@@ -1,6 +1,7 @@
 {
   "alias": [
-    "stories.api.kchung.news"
+    "stories.api.kchung.news",
+    "https://kchung-newsbody-stories-api.now.sh"
   ],
   "env": {
     "NODE_ENV": "production",
