@@ -1,3 +1,5 @@
+require('now-env')
+
 const {
   router,
   get,
@@ -14,9 +16,9 @@ const {
   changeAuthorName
 } = require('./lib/stories')
 const { getSignedUrl } = require('./lib/s3')
+const authorize = require('./lib/authorize')
 
 // TODO: authenticate in lib/stories
-// TODO: authenticate in lib/s3
 // TODO: paginate
 
 // primary key: authorId
@@ -29,7 +31,7 @@ module.exports = cors(router(
   post('/', createStory),
   put('/:titleSlug', replaceStory),
 
-  get('/s3/sign', getSignedUrl),
+  get('/s3/sign', authorize(getSignedUrl)),
 
   put('/author/:slug', changeAuthorName)
 ))
