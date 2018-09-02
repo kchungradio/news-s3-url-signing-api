@@ -1,15 +1,15 @@
 {
-  "name": "kchung-newsbody-stories-api",
-  "description": "KCHUNG Newsbody Stories API",
+  "name": "kchung-news-s3-url-signing-api",
+  "description": "KCHUNG Newsbody S3 URL Signing API",
   "author": "Tim Phillips <tim@kchungradio.org>",
+  "license": "MIT",
   "dependencies": {
-    "dynamo-node": "^1.1.13",
+    "aws-sdk": "^2.307.0",
     "jsonwebtoken": "^8.3.0",
     "micro": "^9.3.2",
     "micro-cors": "^0.0.4",
     "microrouter": "^3.1.3",
-    "now-env": "^3.1.0",
-    "slugify": "^1.3.0"
+    "now-env": "^3.1.0"
   },
   "devDependencies": {
     "micro-dev": "^3.0.0",

@@ -1,10 +1,10 @@
-# KCHUNG News Body Stories API 📰
+# KCHUNG News Body S3 URL Signing API 📰
 
 ## Run locally
 
 `git clone` this repository.
 
-Get `accessKeys.sh` from a secure channel and place in the root of this repo.
+Get `now-secrets.json` from a secure channel and place in the root of this repo.
 
 Install dependencies and run:
 ```bash
