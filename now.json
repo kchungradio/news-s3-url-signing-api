@@ -1,5 +1,8 @@
 {
-  "alias": "https://s3-url-signing.api.kchung.news",
+  "alias": [
+    "https://kchung-news-s3-url-signing-api.now.sh",
+    "https://s3-url-signing.kchung.news"
+  ],
   "env": {
     "NODE_ENV": "production",
     "AWS_ACCESS_KEY_ID": "@kchung-aws-access-key-id",
